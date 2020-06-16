@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 :root {
-  --ff-primary: "Source Sans Pro", sans-serif;
-  --ff-secondary: "Source Code Pro" monospace;
+  --ff-primary: "Oxygen", sans-serif;
+  --ff-secondary: "Oxygen", sans-serif;
 
   --fw-reg: 300;
-  --fw-bold: 900;
+  --fw-med: 400;
+  --fw-bold: 700;
 
-  --clr-light: #e9e9e9;
-  --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-light: #e0e0e0;
+  --clr-dark: #222629;
+  --clr-accent: #8ac832;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -42,6 +43,7 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
   line-height: 1.6;
 }
 section {
@@ -92,9 +94,11 @@ h1 {
 }
 h2 {
   font-size: var(--fs-h2);
+  font-weight: var(--fw-med);
 }
 h3 {
   font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
 }
 
 .section__title {
@@ -115,8 +119,9 @@ h3 {
 .section__subtitle--about {
   background: var(--clr-accent);
   padding: 0.25em 1em;
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   margin-bottom: 1em;
+  color: #ffffff;
 }
 .section__subtitle--work {
   color: var(--clr-accent);
@@ -269,11 +274,15 @@ header {
   background-size: cover;
   background-blend-mode: multiply;
   color: var(--clr-light);
-  text-align: center;
+  text-align: left;
+}
+.my-services p {
+  color: #999999;
 }
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
+  text-align: center;
 }
 .section__title--services::after {
   content: "";
