@@ -12,8 +12,10 @@
   --fw-bold: 700;
 
   --clr-light: #e0e0e0;
+  --clr-med: #6b6c70;
   --clr-dark: #222629;
   --clr-accent: #8ac832;
+  --clr-accent-dark: #61892f;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -27,7 +29,7 @@
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 3rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -105,7 +107,7 @@ h3 {
   margin-bottom: 0.25em;
 }
 .section__title--intro {
-  font-weight: var(--fw-reg);
+  font-weight: var(--fw-bold);
 }
 .section__title--intro strong {
   display: block;
@@ -115,7 +117,6 @@ h3 {
   font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
   padding: 0.25em 1em;
@@ -227,7 +228,9 @@ header {
 /* Intro Section */
 
 .intro {
-  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 0;
 }
 
 .intro__img {
@@ -237,6 +240,18 @@ header {
   display: inline;
 }
 @media (min-width: 600px) {
+  .intro {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
+  .section__subtitle--intro {
+    text-transform: uppercase;
+    color: var(--clr-med);
+    letter-spacing: 0.2rem;
+  }
+}
+/* @media (min-width: 600px) {
   .intro {
     display: grid;
     width: min-content;
@@ -264,20 +279,23 @@ header {
     left: -1.5em;
     width: calc(100% * 1.5em);
   }
-}
+} */
 
 /* My Services */
 
 .my-services {
-  background-color: var(--clr-dark);
-  /* need to add background image */
+  background-color: #4d9698;
+  background-image: url(../images/15_republic_grocha_005.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   color: var(--clr-light);
-  text-align: left;
+  text-align: center;
 }
 .my-services p {
-  color: #999999;
+  color: var(--clr-light);
+}
+#services .btn {
+  text-align: center;
 }
 .section__title--services {
   color: var(--clr-accent);
@@ -287,7 +305,6 @@ header {
 .section__title--services::after {
   content: "";
   display: block;
-  width: 2em;
   height: 1px;
   margin: 0.5em auto 1em;
   background: var(--clr-light);
@@ -295,6 +312,7 @@ header {
 }
 .services {
   margin-bottom: 4em;
+  text-align: left;
 }
 .service {
   max-width: 500px;
